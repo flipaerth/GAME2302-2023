@@ -5,6 +5,18 @@
  * * * * * * * * * * * */
 
 
+
+/* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
+ * New Side note (2023):                                                             *
+ * I copy & pasted this from the last time I did this so I could have a foundation   *
+ * to work on, because this does work as intended for the assignment, but I still    *
+ * have been wanting to go back and optimize/clean it up a bit more.                 *
+ * I left the second and third function as they were, because I don't think I can    *
+ * improve on those without getting too deep into it.                                *
+ * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
+
+
+
  /* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
   * OBJECTIVES:                                                                         *
   *                                                                                     *
@@ -16,14 +28,6 @@
   * 3) a function that returns a string with the vowels removed.                        *
   *    ("the cake is a lie" => "th ck s  l")                                            *
   * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
-
-
-  /* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
-   * SIDE NOTE: for the first function, I wasn't sure what the parameters were *
-   * for the two different numbers, so I just chose 2 and 3 to keep it simple. *
-   * Otherwise, I would've tried to make a random number generator for the two *
-   * and that would've just turned into a whole mess.                          *
-   * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
 
 
 #include <iostream>
@@ -42,7 +46,7 @@ int main()
     int selection = 0;
 
     // Menu Display
-    cout << "1) Output all numbers from 0 to 1000 that are divisible by two and three." << endl;
+    cout << "1) Output all numbers from 0 to 1000 that are divisible by two different numbers." << endl;
     cout << "2) Reverse the letters in a string." << endl;
     cout << "3) Return a string with the vowels removed." << endl;
     cout << "Please enter 1, 2, or 3 to select a function to run: ";
@@ -89,6 +93,47 @@ int main()
 // SIDE NOTE: I'm sure there's a better, cleaner way to do this, but this is what I've got.
 void fOne() {
 
+    /* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
+     * I used ChatGPT to help me learn/figure out how to use the modulus *
+     * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
+
+    // Variables
+    int numOne;
+    int numTwo;
+
+    // Input Validation
+    cout << "Enter the first number: ";
+    cin >> numOne;
+
+    // Input Validation
+    cout << "Enter the second number: ";
+    cin >> numTwo;
+    cout << endl;
+
+    // Input Confirmation
+    cout << "You have entered " << numOne << " as your first number and " << numTwo << " as your second number." << endl;
+
+    // Output
+    cout << "Here is a list of every number from 0 to 1000 that is divisible by " << numOne << " and " << numTwo << ":" << endl;
+
+    // Loop to step through each number between 0 through 1000
+    for (int i = 0; i <= 1000; i++) {
+
+        // Condition to check if i (the index number) is divisible by both numbers
+        if (i % numOne == 0 && i % numTwo == 0) {
+
+            // Output if the index number is divisible by both numbers
+            cout << i << endl;
+        }
+    }
+
+
+
+    /* * * * * * * * * * * * * * *
+     * This is my original code  *
+     * * * * * * * * * * * * * * */
+
+    /*
     // Boolean Variables
     bool twoDivisible = false;
     bool threeDivisible = false;
@@ -131,6 +176,7 @@ void fOne() {
             cout << i << endl;
         }
     }
+    */
 }
 
 // Function Two

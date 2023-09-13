@@ -1,0 +1,4 @@
+﻿  WeekTwoAssignment.cpp
+C:\Users\austi\Desktop\GAME 2303 GitHub\GAME2302-2023\WeekTwoAssignment\WeekTwoAssignment.cpp(208,11): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
+C:\Users\austi\Desktop\GAME 2303 GitHub\GAME2302-2023\WeekTwoAssignment\WeekTwoAssignment.cpp(244,11): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
+  WeekTwoAssignment.vcxproj -> C:\Users\austi\Desktop\GAME 2303 GitHub\GAME2302-2023\WeekTwoAssignment\x64\Debug\WeekTwoAssignment.exe

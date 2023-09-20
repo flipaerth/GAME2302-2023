@@ -51,7 +51,12 @@ private:
 public:
 
 	// Constructor
-	Student(string f, string l, int g) : firstName(f), lastName(l), grade(g) {}
+	Student(string f, string l, int g)
+	{
+		firstName = f;
+		lastName = l;
+		grade = g;
+	}
 
 	// Getter for first name
 	string GetFirst() {
@@ -148,6 +153,30 @@ int main()
 		cout << "Unable to open the student's files." << endl;
 	}
 
+	// Display Output
+	cout << endl << "Sorting from highest grade to lowest grade." << endl << endl;
+
+	// Variables
+	//int temp;
+
+	// Sorting
+	for (int i = 0; i < students.size(); i++)
+	{
+		for (int j = 0; j < students.size(); j++)
+		{
+			if (students[i] > students[j])
+			{
+				string temp = students[j];
+				students[j] = students[i];
+				students[i] = temp;
+			}
+		}
+	}
+	
+	for (int i = 0; i < students.size(); i++) {
+		cout << students[i] << endl;
+	}
+	
 	// Average Formula
 	average = total / numStudents;
 
